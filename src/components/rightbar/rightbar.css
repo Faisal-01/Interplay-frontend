@@ -1,0 +1,14 @@
+.rightbar{
+    flex: 4;
+    padding: 20px;
+}
+
+.rightbar-title{
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+    .rightbar{
+        display: none;
+    }
+}

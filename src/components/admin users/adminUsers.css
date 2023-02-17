@@ -1,0 +1,30 @@
+.admin-user-container{
+    padding-left: 10px;
+}
+
+.user-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-list tr {
+    display: flex;
+}
+
+.user-list th, .user-list td{
+    text-align: left;
+    width: 100%;
+}
+
+.admin-user{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

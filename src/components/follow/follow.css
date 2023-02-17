@@ -1,0 +1,16 @@
+.follow-btn{
+    width: max-content;
+    margin: 0 auto;
+    background-color: hsl(240, 93%, 73%);
+    border: none;
+    border-radius: 10px;
+}
+
+.follow-div{
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    
+}

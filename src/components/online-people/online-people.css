@@ -1,0 +1,35 @@
+.online-friends {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.friend-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.friend {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.online-icon {
+    top: -4px;
+    left: 25px;
+    position: absolute;
+    font-size: 15px !important;
+    /* border: 1px solid white; */
+    color: hsl(120, 30%, 44%);
+    border-radius: 50%;
+    /* border: 1px solid white;
+     */
+}
+
+a{
+    color: black;
+}

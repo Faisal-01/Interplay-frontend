@@ -1,0 +1,166 @@
+.topbar-container{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(89, 89, 255);
+    display: flex;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container{
+    flex: 4;
+    /* padding-left: 40px; */
+}
+
+.logo{
+    margin-left: 40px;
+}
+
+.logo-image{
+    width: 100%;
+}
+
+.search-container{
+    flex: 6;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 10px;
+    gap: 5px;
+        background-color: #f1f1f1;
+}
+
+.search-input{
+    width: 100%;
+}
+
+.search-input > input{
+    width: 70%;
+    height: 100%;
+    border: none;
+        background-color: #f1f1f1;
+}
+
+.search-input > input:focus{
+    outline: none;
+}
+
+.search-icon{
+    color: black!important;
+}
+
+.pages-container{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.pages{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.pages > li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.links-container{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.links > li{
+    position: relative;
+}
+
+.link{
+    font-size: 25px !important;
+}
+
+.count{
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: -5px;
+    left: 15px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.profile-pic-container{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: white;
+}
+
+a{
+    color: white;
+}
+
+.logout{
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px){
+    .logo-container{
+        flex: 2;
+    }
+
+    .search-container{
+        flex: 3;
+    }
+
+    .pages-container{
+        display: none;
+    }
+
+    .links-container{
+        display: none;
+    }
+
+    .logout-container{
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .logo{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,57 @@
+.leftbar{
+    flex: 4;
+    padding: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+    top: 80px;
+    position: sticky;
+}
+
+.options{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.option-icon{
+    font-size: 30px!important;
+}
+
+.options-show-more-btn{
+    padding: 10px 25px;
+    background-color: rgb(89, 89, 255);
+    border: none;
+    margin-left: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+.leftbar-hr{
+    margin: 20px 0px;
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}

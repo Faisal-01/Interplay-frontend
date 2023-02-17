@@ -1,0 +1,38 @@
+.admin-post-container {
+    padding-left: 10px;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post-list tr {
+    display: flex;
+}
+
+.post-list th,
+.post-list td {
+    text-align: left;
+    width: 100%;
+}
+
+.admin-post {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+td{
+    padding: 5px;
+}
+
+.admin-pics{
+    width: 80%;
+}
