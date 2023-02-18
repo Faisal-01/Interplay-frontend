@@ -20,7 +20,7 @@ export default function Login() {
     e.preventDefault();
     let response;
     try {
-      response = await axios.post("http://localhost:5000/api/v1/login", {
+      response = await axios.post("/login", {
         email: email,
         password: password,
       });
