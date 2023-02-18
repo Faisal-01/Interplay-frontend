@@ -20,6 +20,7 @@ export default function Rightbar() {
       <h1 className="rightbar-title">All Users</h1>
 
       <ul className="online-friends">
+        
         {allUsers && allUsers.map((person) => {
           return <OnlinePeople key={person._id} person={person}/> 
         })}
