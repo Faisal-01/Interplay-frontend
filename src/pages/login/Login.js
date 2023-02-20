@@ -9,7 +9,7 @@ import Error from "../../components/error";
 // import { Air } from "@mui/icons-material";
 
 export default function Login() {
-  const { state, dispatch } = useAppContext();
+  const { state, dispatch, rootPath } = useAppContext();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +21,7 @@ export default function Login() {
     let response;
     try {
       response = await axios.post(
-        "https://interplay-backend.vercel.app/api/v1/login",
+        rootPath + "/login",
         {
           email: email,
           password: password,

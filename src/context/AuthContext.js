@@ -36,6 +36,7 @@ export const AppContextProvider = ({ children }) => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [rootPath] = useState("https://interplay-backend.vercel.app/api/v1");
 
-  return <AppContext.Provider value={{state, dispatch}}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{state, dispatch, rootPath}}>{children}</AppContext.Provider>;
 };
