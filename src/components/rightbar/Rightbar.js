@@ -21,9 +21,9 @@ export default function Rightbar() {
 
       <ul className="online-friends">
         
-        {allUsers && allUsers.map((person) => {
+        {/* {allUsers && allUsers.map((person) => {
           return <OnlinePeople key={person._id} person={person}/> 
-        })}
+        })} */}
       </ul>
     </section>
   );
