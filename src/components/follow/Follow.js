@@ -6,7 +6,7 @@ import { useAppContext } from "../../context/AuthContext";
 import axios from "axios";
 
 export default function Follow({ user }) {
-  const { state } = useAppContext();
+  const { state, rootPath } = useAppContext();
 
   const [isFollowing, setIsFollowing] = useState(false);
 
@@ -30,13 +30,13 @@ export default function Follow({ user }) {
   async function followHandler() {
     try {
       if (isFollowing) {
-        const response = await axios.patch(`/user/unfollow/${user._id}`, {
+        const response = await axios.patch(`${rootPath}/user/unfollow/${user._id}`, {
           userId: state.user._id,
         });
         localStorage.setItem("loginUser", JSON.stringify(response.data));
         setIsFollowing(false);
       } else {
-        const response = await axios.patch(`/user/follow/${user._id}`, {
+        const response = await axios.patch(`${rootPath}/user/follow/${user._id}`, {
           userId: state.user._id,
         });
         localStorage.setItem("loginUser", JSON.stringify(response.data));

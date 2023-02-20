@@ -7,16 +7,18 @@ import Topbar from "../../components/topbar/Topbar";
 import {useState, useEffect, useCallback} from 'react';
 import axios from 'axios';
 import { useParams } from "react-router";
+import { useAppContext } from "../../context/AuthContext";
 
 export default function Profile() {
 
   const [user, setUser] = useState({});
+  const {rootPath} = useAppContext();
 
   const params = useParams();
 
   const getUser = useCallback(async () => {
     try {
-      const myUser = await axios.get(`/user?username=${params.username}`);
+      const myUser = await axios.get(`${rootPath}/user?username=${params.username}`);
       setUser(myUser.data.others);
     } catch (error) {
       console.log(error);

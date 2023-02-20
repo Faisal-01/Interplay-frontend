@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "./adminUsers.css";
+import { useAppContext } from "../../context/AuthContext";
 
 export default function AdminUsers() {
-
+    const {rootPath} = useAppContext();
     const [allUsers, setAllUsers] = useState();
 
     async function getAllUsers(){
         try {
-            const response = await axios.get("/user/all");
+            const response = await axios.get(rootPath + "/user/all");
             setAllUsers(response.data);
         } catch (error) {
         console.log(error);

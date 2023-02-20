@@ -20,7 +20,7 @@ export default function CreatePost({getTimeline}) {
 
   const [file, setFile] = useState(null);
 
-  const { state } = useAppContext();
+  const { state, rootPath } = useAppContext();
 
   const postHandler = async (e) => {
     e.preventDefault();
@@ -38,14 +38,14 @@ export default function CreatePost({getTimeline}) {
       newPost.img = "/images/posts/" + fileName;
 
       try {
-        await axios.post("/upload", fileData);
+        await axios.post(rootPath + "/upload", fileData);
       } catch (error) {
         console.log(error);
       }
     }
 
     try {
-      await axios.post("/post", newPost);
+      await axios.post(rootPath + "/post", newPost);
       alert("Post uploaded successfully");
       getTimeline();
     } catch (error) {

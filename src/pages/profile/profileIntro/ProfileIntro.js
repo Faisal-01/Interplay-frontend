@@ -12,15 +12,15 @@ export default function ProfileIntro({user}) {
   const [personFollowings, setPersonFollowings] = useState();
   const [personFollowers, setPersonFollowers] = useState();
 
-  const {state} = useAppContext();
+  const {state, rootPath} = useAppContext();
 
   useEffect(() => {
     async function getFollowings(){
-      const response = await axios.get(`/user/following/${user._id}`);
+      const response = await axios.get(`${rootPath}/user/following/${user._id}`);
       setPersonFollowings(response.data);
     }
     async function getFollowers() {
-      const response = await axios.get(`/user/follower/${user._id}`);
+      const response = await axios.get(`${rootPath}/user/follower/${user._id}`);
       setPersonFollowers(response.data);
     }
     if(Object.keys(user).length !== 0 )

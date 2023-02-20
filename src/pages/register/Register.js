@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Register() {
 
-  const {state, dispatch} = useAppContext();
+  const {state, dispatch, rootPath} = useAppContext();
 
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ export default function Register() {
       }
 
       try {
-        const response = await axios.post('/register', user);
+        const response = await axios.post(rootPath + '/register', user);
         
         setTimeout(() => {
           dispatch({type: "MESSAGE", payload: "User Registered Successfully"})

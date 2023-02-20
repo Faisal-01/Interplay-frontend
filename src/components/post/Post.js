@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useAppContext } from "../../context/AuthContext";
 
 export default function Post({ post }) {
-  const { state } = useAppContext();
+  const { state, rootPath } = useAppContext();
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
@@ -21,7 +21,7 @@ export default function Post({ post }) {
 
   const getUser = useCallback(async () => {
     try {
-      const user = await axios.get(`/user?id=${post.userId}`);
+      const user = await axios.get(`${rootPath}/user?id=${post.userId}`);
       setUser(user.data.others);
     } catch (error) {
       console.log(error);
@@ -75,7 +75,7 @@ export default function Post({ post }) {
 
   async function likeHandler() {
     try {
-      const response = await axios.patch(`/post/${post._id}/like`, {
+      const response = await axios.patch(`${rootPath}/post/${post._id}/like`, {
         userId: state.user._id,
       });
       setLikes(response.data.length);

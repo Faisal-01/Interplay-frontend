@@ -6,11 +6,11 @@ import { useAppContext } from "../../context/AuthContext";
 export default function AdminUsers() {
   const [allPosts, setAllPosts] = useState();
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-  const { state } = useAppContext();
+  const { state, rootPath } = useAppContext();
 
   async function getAllPosts() {
     try {
-      const response = await axios.get("/post/all");
+      const response = await axios.get(rootPath + "/post/all");
       setAllPosts(response.data);
     } catch (error) {
       console.log(error);
@@ -24,7 +24,7 @@ export default function AdminUsers() {
   async function postDeleteHandler(id) {
     try {
       await axios.delete(
-        `/post/${id}`,
+        `${rootPath}/post/${id}`,
         {
           data: {userId: state.user._id}
         }
