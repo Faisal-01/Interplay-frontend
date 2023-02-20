@@ -20,10 +20,13 @@ export default function Login() {
     e.preventDefault();
     let response;
     try {
-      response = await axios.post("/login", {
-        email: email,
-        password: password,
-      });
+      response = await axios.post(
+        "https://interplay-backend.vercel.app/api/v1/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
 
       localStorage.setItem("loginUser", JSON.stringify(response.data));
 
