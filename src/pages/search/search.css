@@ -1,0 +1,116 @@
+.search-body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.search-wrapper{
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 80px;
+    padding: 20px 5%;
+    /* padding: 20px; */
+}
+
+.search-title{
+    margin-bottom: 20px;
+}
+
+.search-people{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.search-person{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-person-details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-person-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.search-person-button{
+    /* width: 100px; */
+    height: 60px;
+    background-color: rgb(122, 122, 255);
+    color: white;
+    font-size: 20px;
+}
+
+.search-mobile{
+    display: none;
+}
+
+.search-error{
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1200px){
+    .search-wrapper{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .search-person-image{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .search-title{
+        font-size: 20px;
+    }
+
+    .search-person-button {
+        /* width: 80px; */
+        height: 40px;
+        background-color: rgb(122, 122, 255);
+        color: white;
+        font-size: 15px;
+    }
+
+    .search-person-name{
+        font-size: 15px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 550px){
+    .search-mobile {
+        display: flex;
+        background-color: #eee;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search-mobile-input {
+        display: flex;
+        width: 100%;
+    }
+
+    .search-mobile-input>input {
+        flex: 1
+    }
+}

@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useState } from "react";
+import { createContext, useContext, useReducer, useState, useRef } from "react";
 
 const AppContext = createContext();
 
@@ -37,6 +37,13 @@ export const AppContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
   const [rootPath] = useState("https://interplay-backend.vercel.app/api/v1");
+  // const [rootPath] = useState("http://localhost:5000/api/v1");
+  const sidebarRef = useRef(null);
 
-  return <AppContext.Provider value={{state, dispatch, rootPath}}>{children}</AppContext.Provider>;
+
+  return (
+    <AppContext.Provider value={{ state, dispatch, rootPath, sidebarRef }}>
+      {children}
+    </AppContext.Provider>
+  );
 };

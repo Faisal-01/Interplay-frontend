@@ -12,7 +12,7 @@ import { useAppContext } from "../../context/AuthContext";
 export default function Profile() {
 
   const [user, setUser] = useState({});
-  const {rootPath} = useAppContext();
+  const {rootPath, sidebarRef} = useAppContext();
 
   const params = useParams();
 
@@ -28,6 +28,10 @@ export default function Profile() {
   useEffect(() => {
     getUser()
   }, [getUser])
+
+  useEffect(() => {
+    sidebarRef.current.classList.remove("show");
+  }, []);
 
   return (
     <div className="profile-container">

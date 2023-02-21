@@ -131,10 +131,26 @@ a{
     color: white;
 }
 
-.logout{
+.logout-container{
     display: flex;
     flex: 1;
+    
+}
+
+.logout{
     cursor: pointer;
+}
+
+.bars{
+    display: none;
+}
+
+.sidebar{
+    display: none;
+}
+
+.close{
+    display: none;
 }
 
 @media only screen and (max-width: 1100px){
@@ -153,14 +169,76 @@ a{
     .links-container{
         display: none;
     }
-
-    .logout-container{
-        flex: 1;
-    }
 }
 
 @media only screen and (max-width: 850px){
     .logo{
         margin-left: 0;
     }
+}
+
+@media only screen and (max-width: 550px){
+    .search-container{
+        display: none;
+    }
+
+    .profile-pic-container{
+        display: none;
+    }
+
+    .logout-container{
+        display: none;
+    }
+
+    .logo-container{
+        flex: 1;
+    }
+
+    .bars{
+        display: flex;
+        flex: 1;
+        justify-content: right;
+        padding-right: 20px;
+    }
+
+    .sidebar {
+        display: flex;
+        position: absolute;
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: hsl(240, 100%, 75%);
+    }
+
+    .show{
+        width: 70%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+    }
+
+    .profile-items{
+        padding-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-item > a{
+        color: white;
+        font-size: 30px;
+    }
+
+    
 }
