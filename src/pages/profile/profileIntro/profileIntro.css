@@ -36,3 +36,10 @@
         
     }
 }
+
+@media only screen and (max-width: 550px){
+    .profile-intro-heading,
+    .user-friend-heading{
+        font-size: 20px;
+    }
+}
